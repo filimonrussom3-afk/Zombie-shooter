@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zombie Shooter</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    #gameShell {
+      width: 100%;
+      height: 100vh;
+    }
+
+    #startOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 1000;
+    }
+
+    #startOverlay.hidden {
+      display: none;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #3f8f42;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="gameShell"></div>
+
+<div id="startOverlay">
+  <h1>Zombie Shooter</h1>
+
+  <div class="button-container">
+    <button id="htmlSingleBtn">Single Player</button>
+    <button id="htmlMultiBtn">Two Players</button>
+  </div>
+</div>
+
+<script src="player.js"></script>
+<script src="bullet.js"></script>
+<script src="enemybullet.js"></script>
+<script src="zombie.js"></script>
+<script src="BossZombie.js"></script>
+<script src="powerup.js"></script>
+<script src="soundSystem.js"></script>
+<script src="ui.js"></script>
+<script src="gameLogic.js"></script>
+<script src="sketch.js"></script>
+
+</body>
+</html>
